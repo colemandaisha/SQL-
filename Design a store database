@@ -1,1 +1,14 @@
-https://www.khanacademy.org/computer-programming/spin-off-of-project-design-a-store-database/5854359355965440
+CREATE TABLE SILKSZN_HAIR (id integer primary key, name TEXT, inches INTEGER, hair_color TEXT, hair_type TEXT, quantity INTEGER, price INTEGER);
+INSERT INTO SILKSZN_HAIR VALUES(1, "13X6 FRONTAL",28, "black", "curly", 56, 15500); 
+INSERT INTO SILKSZN_HAIR VALUES(2, "13X6 FRONTAL", 26, "blonde", "straight", 30, 14450);
+INSERT INTO SILKSZN_HAIR VALUES(3, "13X6 FRONTAL", 24, "black", "curly", 35, 13400);
+INSERT INTO SILKSZN_HAIR VALUES(4, "13X6 FRONTAL", 22, "blonde", "straight", 21, 12350);
+INSERT INTO SILKSZN_HAIR VALUES(5, "13X6 FRONTAL", 20, "black", "bodywave",10, 1110300);
+INSERT INTO SILKSZN_HAIR VALUES(6, "13X6 FRONTAL", 30, "black", "bodywave", 55, 16600);
+SELECT * FROM SILKSZN_HAIR;
+
+SELECT * FROM SILKSZN_HAIR WHERE name ORDER BY "price";
+
+SELECT SUM ("price") FROM SILKSZN_HAIR;
+
+SELECT "hair_type", SUM("price") FROM SILKSZN_HAIR GROUP BY "hair_type";
